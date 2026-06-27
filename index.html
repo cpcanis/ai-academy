@@ -1,0 +1,516 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Learning Academy</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+css
+.banner-box{
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.banner-box img{
+    width:100%;
+    display:block;
+    height:auto;
+}
+
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    background:
+    radial-gradient(circle at top left,#2563eb 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%);
+}
+
+.hero-content{
+    width:100%;
+    padding-top:100px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:linear-gradient(135deg,#38bdf8,#6366f1);
+    border-radius:50px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* Video */
+
+.section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.video-box{
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+
+.video-box iframe{
+    width:100%;
+    height:600px;
+    border:none;
+}
+
+/* Courses */
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.course-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:25px;
+}
+
+.course-content h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.course-content p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* Features */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature-box{
+    background:rgba(255,255,255,.05);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.feature-box i{
+    font-size:45px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* Testimonials */
+
+.testimonial{
+    background:rgba(255,255,255,.05);
+    padding:25px;
+    border-radius:20px;
+}
+
+/* FAQ */
+
+.faq-item{
+    background:rgba(255,255,255,.05);
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:15px;
+}
+
+/* Footer */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+/* Floating Buttons */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+}
+
+.messenger{
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#0084FF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.nav-links{
+    gap:12px;
+    font-size:14px;
+}
+
+.video-box iframe{
+    height:250px;
+}
+
+.section-title{
+    font-size:30px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<div class="navbar">
+
+<div class="logo">
+AI Academy
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#video">Video</a>
+<a href="#courses">Courses</a>
+<a href="#features">Features</a>
+<a href="#faq">FAQ</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<h1>বাংলায় AI, Design ও Freelancing শেখার সম্পূর্ণ প্ল্যাটফর্ম</h1>
+
+<p>
+AI Video Making, Islamic Cartoon, USA Cartoon,
+Prompt Engineering, Graphic Design With AI
+এবং Video Editing With AI শিখুন এক জায়গায়।
+</p>
+
+<a href="#courses" class="hero-btn">
+সব কোর্স দেখুন
+</a>
+
+</div>
+</div>
+</section>
+
+
+<section class="section" id="hero-banner">
+
+<div class="container">
+
+<h2 class="section-title">
+AI Professional Video Making Course
+</h2>
+
+<div class="banner-box">
+
+<img src="images/course-banner.png"
+alt="Course Banner">
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="courses">
+
+<div class="container">
+
+<h2 class="section-title">
+আমাদের প্রিমিয়াম কোর্সসমূহ
+</h2>
+
+<div class="course-grid">
+
+<div class="course-card">
+<img src="images/Banglacartoon.png">
+<div class="course-content">
+<h3>Cartoon Video Course</h3>
+<p>ইসলামিক গল্প, চরিত্র তৈরি, AI Animation ও Cartoon Production.</p>
+</div>
+</div>
+
+<div class="course-card">
+<img src="images/usa.jpg">
+<div class="course-content">
+<h3>USA Based Cartoon Video Course</h3>
+<p>US Audience এর জন্য Cartoon Content তৈরির পূর্ণ গাইড।</p>
+</div>
+</div>
+
+<div class="course-card">
+<img src="images/avf.png">
+<div class="course-content">
+<h3>AI Video Making Freelancing</h3>
+<p>AI Video Service বিক্রি করে Freelancing শুরু করুন।</p>
+</div>
+</div>
+
+<div class="course-card">
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+<div class="course-content">
+<h3>Graphic Design With AI</h3>
+<p>AI ব্যবহার করে Logo, Branding ও Social Media Design.</p>
+</div>
+</div>
+
+<div class="course-card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="course-content">
+<h3>Prompt Engineering</h3>
+<p>ChatGPT, Gemini ও অন্যান্য AI-এর জন্য Professional Prompting.</p>
+</div>
+</div>
+
+<div class="course-card">
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97">
+<div class="course-content">
+<h3>Video Editing With AI</h3>
+<p>AI Tools ব্যবহার করে Professional Video Editing শিখুন।</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="features">
+<div class="container">
+
+<h2 class="section-title">
+কেন আমাদের কোর্স?
+</h2>
+
+<div class="features">
+
+<div class="feature-box">
+<i class="fas fa-laptop-code"></i>
+<h3>Live Support</h3>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-robot"></i>
+<h3>AI Integration</h3>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-briefcase"></i>
+<h3>Freelancing Guide</h3>
+</div>
+
+<div class="feature-box">
+<i class="fas fa-certificate"></i>
+<h3>Real Projects</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+Student Success
+</h2>
+
+<div class="testimonial">
+<p>
+★★★★★
+"কোর্সটি করে আমি AI Video Service দিয়ে Freelancing শুরু করেছি।"
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="faq">
+<div class="container">
+
+<h2 class="section-title">
+FAQ
+</h2>
+
+<div class="faq-item">
+<h3>কোর্সগুলো কি রেকর্ডেড?</h3>
+<p>রেকর্ডেড এবং আপডেটেড কনটেন্ট প্রদান করা হবে।</p>
+</div>
+
+<div class="faq-item">
+<h3>মোবাইল দিয়ে করা যাবে?</h3>
+<p>হ্যাঁ, অধিকাংশ ক্লাস মোবাইল দিয়েই করা সম্ভব।</p>
+</div>
+
+<div class="faq-item">
+<h3>ফ্রিল্যান্সিং শেখানো হবে?</h3>
+<p>হ্যাঁ, AI Skills থেকে Income করার গাইডলাইন থাকবে।</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 AI Academy | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/8801824793592?text=আসসালামু%20আলাইকুম,%20আমি%20আপনার%20কোর্স%20সম্পর্কে%20জানতে%20চাই।"
+class="whatsapp"
+target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://m.me/yourpage" class="messenger">
+<i class="fab fa-facebook-messenger"></i>
+</a>
+
+</body>
+</html>
+```
